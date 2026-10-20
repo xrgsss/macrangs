@@ -82,7 +82,7 @@ export function SystemPreferences({
             R
           </div>
           <div className="min-w-0">
-            <p className="truncate text-[11.5px] font-semibold leading-[14px]">Rizky</p>
+            <p className="truncate text-[11.5px] font-semibold leading-[14px]">Rangshar</p>
             <p className="truncate text-[9.5px] text-black/40">Apple ID, iCloud, Media</p>
           </div>
           <ChevronRight className="ml-auto h-[11px] w-[11px] text-black/25" />
@@ -545,7 +545,7 @@ function GeneralPane() {
       </Group>
       <Group title="System">
         <Row label="Name">
-          <span className="text-[10.5px] text-black/45">Rizky’s MacBook Pro</span>
+          <span className="text-[10.5px] text-black/45">Rangshar’s MacBook Pro</span>
         </Row>
         <Row label="Serial Number">
           <span className="text-[10.5px] text-black/45">C02BIGSUR2020</span>

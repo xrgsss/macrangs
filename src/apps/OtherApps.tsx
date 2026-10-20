@@ -1036,7 +1036,7 @@ export function MailApp() {
                 <Avatar name={selected.from} size={30} index={emails.findIndex((e) => e.id === selected.id)} />
                 <div className="min-w-0">
                   <p className="text-[11px] font-semibold">{selected.from}</p>
-                  <p className="text-[9px] text-black/35">to Rizky · {selected.time}</p>
+                  <p className="text-[9px] text-black/35">to Rangshar · {selected.time}</p>
                 </div>
                 <button className="ml-auto text-[9.5px] text-black/30 hover:text-black/60">Details</button>
               </div>

@@ -78,7 +78,7 @@ export function LockScreen({ wallpaper, onUnlock }: { wallpaper: string; onUnloc
           </span>
         </div>
         <p className="mt-[11px] text-[14px] font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
-          Rizky
+          Rangshar
         </p>
 
         <form
