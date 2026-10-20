@@ -1,0 +1,175 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --menubar-h: 26px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter',
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  cursor: default;
+  background: #0b1a33;
+  color: #1d1d1f;
+  overscroll-behavior: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  user-select: text;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(10, 132, 255, 0.28);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.mac-scroll::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+.mac-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.mac-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+  background-clip: content-box;
+}
+.mac-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.glass {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.12));
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+}
+
+.menubar-glass {
+  background: linear-gradient(180deg, rgba(18, 22, 32, 0.34), rgba(18, 22, 32, 0.18));
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+}
+
+.panel-glass {
+  background: rgba(242, 242, 246, 0.74);
+  backdrop-filter: blur(44px) saturate(180%);
+  -webkit-backdrop-filter: blur(44px) saturate(180%);
+}
+
+.window-shadow-active {
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.28), 0 12px 28px rgba(0, 0, 0, 0.26),
+    0 38px 80px rgba(0, 0, 0, 0.36);
+}
+
+.window-shadow-inactive {
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.2), 0 8px 22px rgba(0, 0, 0, 0.16),
+    0 22px 50px rgba(0, 0, 0, 0.2);
+}
+
+.window-radius {
+  border-radius: 11px;
+}
+
+.no-drag {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  transition: filter 120ms ease;
+}
+
+.traffic-light svg {
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+
+.traffic-group:hover .traffic-light svg {
+  opacity: 1;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+@keyframes loadingBar {
+  0% {
+    transform: translateX(-110%);
+  }
+  60% {
+    transform: translateX(180%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
+}
+
+@keyframes macBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-5px);
+  }
+  65% {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
